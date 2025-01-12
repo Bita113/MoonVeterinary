@@ -6,7 +6,69 @@
     <title>Cabinet Veterinar - Moon Veterinary</title> 
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"> 
     <style>
-        /* ... (codul CSS rămâne același) ... */ 
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        nav {
+            background-color: #333;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .section-title {
+            color: #4CAF50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+        .service {
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            flex: 1 1 calc(45% - 20px);
+            max-width: calc(45% - 20px);
+            text-align: center;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -22,37 +84,37 @@
     <div class="container">
         <section id="despre">
             <h2 class="section-title">Despre Noi</h2>
-            <p>Suntem dedicați sănătății și fericirii prietenilor necuvântători, oferind servicii de calitate și o îngrijire atentă. La Moon Veterinary, Dr. Dancila Alexandra și echipa sa pasionată de animale vă stau la dispoziție cu o gamă largă de servicii veterinare. [Adaugă mai multe detalii despre experiența Dr. Dancila Alexandra, valorile și misiunea cabinetului.]</p>
-            
-            <div></div>
+            <p>Suntem dedicați sănătății și fericirii prietenilor necuvântători, oferind servicii de calitate și o îngrijire atentă. 
+                <span class="highlight">(aici trebuie adăugat detalii despre experiența Dr. Dancila Alexandra, valorile și misiunea cabinetului)</span>
+            </p>
         </section>
 
         <section id="servicii">
             <h2 class="section-title">Servicii</h2>
             <div class="services">
                 <div class="service">
-                    <img src="[Link către imagine consultatii.jpg]" alt="Consultații veterinare"> 
                     <h3>Consultații</h3>
-                    <p>Oferim consultații generale și specializate pentru o gamă largă de animale de companie, inclusiv câini, pisici, păsări și animale exotice. [Adaugă detalii despre tipurile de consultații și prețuri, dacă este posibil.]</p>
-                    <a href="#" class="button">Află mai multe</a> 
+                    <p>Oferim consultații generale și specializate pentru o gamă largă de animale de companie. 
+                        <span class="highlight">(aici trebuie adăugat detalii despre tipurile de consultații și prețuri, dacă este posibil)</span>
+                    </p>
                 </div>
                 <div class="service">
-                    <img src="[Link către imagine vaccinari.jpg]" alt="Vaccinări animale">
                     <h3>Vaccinări</h3>
-                    <p>Protejați-vă animalele de companie de boli grave prin vaccinări regulate. [Adaugă detalii despre schema de vaccinare și prețuri.]</p>
-                    <a href="#" class="button">Vezi schema de vaccinare</a> 
+                    <p>Protejați-vă animalele de companie de boli grave prin vaccinări regulate. 
+                        <span class="highlight">(aici trebuie adăugat detalii despre schema de vaccinare și prețuri)</span>
+                    </p>
                 </div>
                 <div class="service">
-                    <img src="[Link către imagine chirurgie.jpg]" alt="Chirurgie Veterinară">
                     <h3>Chirurgie</h3>
-                    <p>Intervenții chirurgicale realizate cu grijă și profesionalism, utilizând echipamente moderne și tehnici minim invazive. [Adaugă detalii despre tipurile de intervenții chirurgicale oferite.]</p>
-                    <a href="#" class="button">Află mai multe</a>
+                    <p>Intervenții chirurgicale realizate cu grijă și profesionalism. 
+                        <span class="highlight">(aici trebuie adăugat detalii despre tipurile de intervenții chirurgicale oferite)</span>
+                    </p>
                 </div>
                 <div class="service">
-                    <img src="[Link către imagine tratamente.jpg]" alt="Tratamente Veterinare">
                     <h3>Tratamente</h3>
-                    <p>Tratamente personalizate pentru o varietate de afecțiuni, de la probleme minore la boli cronice. [Adaugă detalii despre tipurile de tratamente oferite.]</p>
-                    <a href="#" class="button">Află mai multe</a>
+                    <p>Tratamente personalizate pentru o varietate de afecțiuni. 
+                        <span class="highlight">(aici trebuie adăugat detalii despre tipurile de tratamente oferite)</span>
+                    </p>
                 </div>
             </div>
         </section>
@@ -62,18 +124,6 @@
             <p>Telefon: <strong>0726 914 400</strong></p>
             <p>Email: contact@cabinetveterinar.ro</p>
             <p>Adresă: Strada Mihai Eminescu, Deva</p>
-
-            <div></div>
-
-            <form action="#" method="post"> 
-                <label for="nume">Nume:</label><br>
-                <input type="text" id="nume" name="nume"><br><br>
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email"><br><br>
-                <label for="mesaj">Mesaj:</label><br>
-                <textarea id="mesaj" name="mesaj"></textarea><br><br>
-                <input type="submit" value="Trimite">
-            </form>
         </section>
     </div>
     <footer>
