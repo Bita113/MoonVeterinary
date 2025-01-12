@@ -10,10 +10,10 @@
     <script>
         window.fbAsyncInit = function() {
             FB.init({
-                appId      : '538443499345155',  // App ID-ul tău
+                appId      : '825847972972775',  // App ID-ul tău actualizat
                 cookie     : true,
                 xfbml      : true,
-                version    : 'v12.0'  // Versiunea API-ului
+                version    : 'v13.0'  // Versiunea API actualizată
             });
 
             // Verificăm starea de autentificare la încărcarea paginii
@@ -131,6 +131,20 @@
         #loginButton {
             display: none; /* Ascundem butonul până când este necesar */
         }
+        .contact-buttons a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .facebook-button {
+            background-color: #3b5998;
+        }
+        .whatsapp-button {
+            background-color: #25D366;
+        }
     </style>
 </head>
 <body>
@@ -152,6 +166,15 @@
             
             <!-- Butonul de login care va fi afișat dacă utilizatorul nu este autentificat -->
             <button id="loginButton" onclick="loginWithFacebook()">Conectează-te cu Facebook</button>
+        </section>
+
+        <!-- Secțiune Contact cu butoane Facebook și WhatsApp -->
+        <section id="contact" class="contact-section">
+            <h3 class="section-title">Contactează-ne</h3>
+            <div class="contact-buttons">
+                <a href="https://www.facebook.com/moonveterinary" class="facebook-button" target="_blank">Facebook</a>
+                <a href="https://wa.me/0726914400" class="whatsapp-button" target="_blank">WhatsApp</a>
+            </div>
         </section>
     </div>
 
