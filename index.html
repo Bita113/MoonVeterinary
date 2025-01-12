@@ -14,41 +14,43 @@
             color: #333;
         }
         header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             background: linear-gradient(90deg, #4CAF50, #66BB6A);
             color: white;
-            padding: 40px 20px;
-            text-align: center;
+            padding: 20px 40px;
         }
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 1.8rem;
         }
-        nav {
-            position: sticky;
-            top: 0;
-            background-color: white;
-            border-bottom: 1px solid #ddd;
-            z-index: 1000;
+        header nav {
+            display: flex;
+            gap: 20px;
         }
-        nav a {
-            color: #4CAF50;
-            padding: 15px 20px;
+        header nav a {
+            color: white;
             text-decoration: none;
             font-weight: bold;
-            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
         }
-        nav a:hover {
-            background-color: #f0f0f0;
+        header nav a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
         }
         .container {
             max-width: 1200px;
             margin: auto;
             padding: 20px;
         }
+        .about-section, .services-section, .contact-section {
+            margin: 40px 0;
+        }
         .section-title {
             text-align: center;
             color: #4CAF50;
-            margin: 40px 0 20px;
+            margin-bottom: 20px;
             font-size: 1.8rem;
         }
         .services {
@@ -56,14 +58,14 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }
-        .service {
+        .service-card {
             background: white;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             padding: 20px;
             text-align: center;
         }
-        .service img {
+        .service-card img {
             max-width: 100%;
             border-radius: 10px;
             margin-bottom: 15px;
@@ -75,60 +77,64 @@
             padding: 20px 0;
             margin-top: 40px;
         }
-        footer p {
-            margin: 0;
-        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Cabinet Veterinar - Moon Veterinary</h1>
-        <p>Grijă pentru prietenii noștri necuvântători!</p>
+        <h1>Moon Veterinary</h1>
+        <nav>
+            <a href="#about">Despre Noi</a>
+            <a href="#services">Servicii</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
-    <nav>
-        <a href="#despre">Despre Noi</a>
-        <a href="#servicii">Servicii</a>
-        <a href="#contact">Contact</a>
-    </nav>
+
     <div class="container">
-        <section id="despre">
+        <!-- Despre Noi -->
+        <section id="about" class="about-section">
             <h2 class="section-title">Despre Noi</h2>
-            <p>La Moon Veterinary, oferim servicii dedicate și o îngrijire atentă pentru animalele tale. Echipa noastră profesionistă, condusă de Dr. Dancila Alexandra, este aici pentru a vă ajuta cu tot ce aveți nevoie.</p>
+            <p>La Moon Veterinary, oferim servicii veterinare de top, cu o echipă dedicată sănătății și bunăstării animalelor.</p>
+            <img src="https://via.placeholder.com/800x400" alt="Echipa noastră" style="width: 100%; border-radius: 10px;">
         </section>
-        <section id="servicii">
+
+        <!-- Servicii -->
+        <section id="services" class="services-section">
             <h2 class="section-title">Servicii</h2>
             <div class="services">
-                <div class="service">
+                <div class="service-card">
                     <img src="https://via.placeholder.com/300" alt="Consultații">
                     <h3>Consultații</h3>
-                    <p>Consultații generale și specializate pentru câini, pisici și animale exotice.</p>
+                    <p>Consultații generale și specializate pentru animalele de companie.</p>
                 </div>
-                <div class="service">
+                <div class="service-card">
                     <img src="https://via.placeholder.com/300" alt="Vaccinări">
                     <h3>Vaccinări</h3>
-                    <p>Protecție sigură și eficientă împotriva bolilor comune.</p>
+                    <p>Vaccinări sigure și eficiente pentru protecția animalelor.</p>
                 </div>
-                <div class="service">
+                <div class="service-card">
                     <img src="https://via.placeholder.com/300" alt="Chirurgie">
                     <h3>Chirurgie</h3>
-                    <p>Intervenții chirurgicale realizate cu echipamente moderne.</p>
+                    <p>Intervenții chirurgicale cu echipamente moderne.</p>
                 </div>
-                <div class="service">
+                <div class="service-card">
                     <img src="https://via.placeholder.com/300" alt="Tratamente">
                     <h3>Tratamente</h3>
-                    <p>Tratamente personalizate pentru afecțiuni complexe.</p>
+                    <p>Tratamente personalizate pentru o varietate de afecțiuni.</p>
                 </div>
             </div>
         </section>
-        <section id="contact">
+
+        <!-- Contact -->
+        <section id="contact" class="contact-section">
             <h2 class="section-title">Contact</h2>
             <p>Telefon: <strong>0726 914 400</strong></p>
             <p>Email: contact@cabinetveterinar.ro</p>
             <p>Adresă: Strada Mihai Eminescu, Deva</p>
         </section>
     </div>
+
     <footer>
-        <p>&copy; 2025 Cabinet Veterinar - Moon Veterinary. Toate drepturile rezervate.</p>
+        <p>&copy; 2025 Moon Veterinary. Toate drepturile rezervate.</p>
     </footer>
 </body>
 </html>
