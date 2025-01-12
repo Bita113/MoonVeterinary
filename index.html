@@ -3,35 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cabinet Veterinar - Moon Veterinary</title> 
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+    <title>Cabinet Veterinar - Moon Veterinary</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Open Sans', sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f9f9f9;
             color: #333;
-            line-height: 1.6;
         }
         header {
-            background-color: #4CAF50;
+            background: linear-gradient(90deg, #4CAF50, #66BB6A);
             color: white;
+            padding: 40px 20px;
             text-align: center;
-            padding: 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
         }
         nav {
-            background-color: #333;
-            text-align: center;
+            position: sticky;
+            top: 0;
+            background-color: white;
+            border-bottom: 1px solid #ddd;
+            z-index: 1000;
         }
         nav a {
-            color: white;
-            padding: 14px 20px;
+            color: #4CAF50;
+            padding: 15px 20px;
             text-decoration: none;
+            font-weight: bold;
             display: inline-block;
         }
         nav a:hover {
-            background-color: #575757;
+            background-color: #f0f0f0;
         }
         .container {
             max-width: 1200px;
@@ -39,41 +46,43 @@
             padding: 20px;
         }
         .section-title {
-            color: #4CAF50;
             text-align: center;
-            margin-bottom: 20px;
+            color: #4CAF50;
+            margin: 40px 0 20px;
+            font-size: 1.8rem;
         }
         .services {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }
         .service {
-            background-color: white;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background: white;
             border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             padding: 20px;
-            flex: 1 1 calc(45% - 20px);
-            max-width: calc(45% - 20px);
             text-align: center;
+        }
+        .service img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
         }
         footer {
-            background-color: #333;
+            background-color: #4CAF50;
             color: white;
             text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
+            padding: 20px 0;
+            margin-top: 40px;
         }
-        .highlight {
-            color: red;
-            font-weight: bold;
+        footer p {
+            margin: 0;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Cabinet Veterinar - Moon Veterinary</h1> 
+        <h1>Cabinet Veterinar - Moon Veterinary</h1>
         <p>Grijă pentru prietenii noștri necuvântători!</p>
     </header>
     <nav>
@@ -84,41 +93,33 @@
     <div class="container">
         <section id="despre">
             <h2 class="section-title">Despre Noi</h2>
-            <p>Suntem dedicați sănătății și fericirii prietenilor necuvântători, oferind servicii de calitate și o îngrijire atentă. 
-                <span class="highlight">(aici trebuie adăugat detalii despre experiența Dr. Dancila Alexandra, valorile și misiunea cabinetului)</span>
-            </p>
+            <p>La Moon Veterinary, oferim servicii dedicate și o îngrijire atentă pentru animalele tale. Echipa noastră profesionistă, condusă de Dr. Dancila Alexandra, este aici pentru a vă ajuta cu tot ce aveți nevoie.</p>
         </section>
-
         <section id="servicii">
             <h2 class="section-title">Servicii</h2>
             <div class="services">
                 <div class="service">
+                    <img src="https://via.placeholder.com/300" alt="Consultații">
                     <h3>Consultații</h3>
-                    <p>Oferim consultații generale și specializate pentru o gamă largă de animale de companie. 
-                        <span class="highlight">(aici trebuie adăugat detalii despre tipurile de consultații și prețuri, dacă este posibil)</span>
-                    </p>
+                    <p>Consultații generale și specializate pentru câini, pisici și animale exotice.</p>
                 </div>
                 <div class="service">
+                    <img src="https://via.placeholder.com/300" alt="Vaccinări">
                     <h3>Vaccinări</h3>
-                    <p>Protejați-vă animalele de companie de boli grave prin vaccinări regulate. 
-                        <span class="highlight">(aici trebuie adăugat detalii despre schema de vaccinare și prețuri)</span>
-                    </p>
+                    <p>Protecție sigură și eficientă împotriva bolilor comune.</p>
                 </div>
                 <div class="service">
+                    <img src="https://via.placeholder.com/300" alt="Chirurgie">
                     <h3>Chirurgie</h3>
-                    <p>Intervenții chirurgicale realizate cu grijă și profesionalism. 
-                        <span class="highlight">(aici trebuie adăugat detalii despre tipurile de intervenții chirurgicale oferite)</span>
-                    </p>
+                    <p>Intervenții chirurgicale realizate cu echipamente moderne.</p>
                 </div>
                 <div class="service">
+                    <img src="https://via.placeholder.com/300" alt="Tratamente">
                     <h3>Tratamente</h3>
-                    <p>Tratamente personalizate pentru o varietate de afecțiuni. 
-                        <span class="highlight">(aici trebuie adăugat detalii despre tipurile de tratamente oferite)</span>
-                    </p>
+                    <p>Tratamente personalizate pentru afecțiuni complexe.</p>
                 </div>
             </div>
         </section>
-
         <section id="contact">
             <h2 class="section-title">Contact</h2>
             <p>Telefon: <strong>0726 914 400</strong></p>
@@ -127,7 +128,7 @@
         </section>
     </div>
     <footer>
-        <p>&copy; 2025 Cabinet Veterinar - Moon Veterinary. Toate drepturile rezervate.</p> 
+        <p>&copy; 2025 Cabinet Veterinar - Moon Veterinary. Toate drepturile rezervate.</p>
     </footer>
 </body>
 </html>
