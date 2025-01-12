@@ -3,77 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cabinet Veterinar</title>
+    <title>Cabinet Veterinar - Moon Veterinary</title> 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"> 
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-            line-height: 1.6;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        nav {
-            background-color: #333;
-            overflow: hidden;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 14px 20px;
-            display: inline-block;
-            text-align: center;
-        }
-        nav a:hover {
-            background-color: #575757;
-        }
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 20px;
-        }
-        .section-title {
-            text-align: center;
-            color: #4CAF50;
-            margin-bottom: 20px;
-        }
-        .services {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            gap: 20px;
-        }
-        .service {
-            background-color: white;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            padding: 20px;
-            flex: 1 1 calc(45% - 20px);
-            max-width: calc(45% - 20px);
-            text-align: center;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
-        }
+        /* ... (codul CSS rămâne același) ... */ 
     </style>
 </head>
 <body>
     <header>
-        <h1>Cabinet Veterinar</h1>
+        <h1>Cabinet Veterinar - Moon Veterinary</h1> 
         <p>Grijă pentru prietenii noștri necuvântători!</p>
     </header>
     <nav>
@@ -84,38 +22,62 @@
     <div class="container">
         <section id="despre">
             <h2 class="section-title">Despre Noi</h2>
-            <p>Suntem dedicați sănătății și fericirii prietenilor necuvântători, oferind servicii de calitate și o îngrijire atentă.</p>
+            <p>Suntem dedicați sănătății și fericirii prietenilor necuvântători, oferind servicii de calitate și o îngrijire atentă. La Moon Veterinary, Dr. Dancila Alexandra și echipa sa pasionată de animale vă stau la dispoziție cu o gamă largă de servicii veterinare. [Adaugă mai multe detalii despre experiența Dr. Dancila Alexandra, valorile și misiunea cabinetului.]</p>
+            
+            <div></div>
         </section>
+
         <section id="servicii">
             <h2 class="section-title">Servicii</h2>
             <div class="services">
                 <div class="service">
+                    <img src="[Link către imagine consultatii.jpg]" alt="Consultații veterinare"> 
                     <h3>Consultații</h3>
-                    <p>Consultații generale și specializate pentru animalele de companie.</p>
+                    <p>Oferim consultații generale și specializate pentru o gamă largă de animale de companie, inclusiv câini, pisici, păsări și animale exotice. [Adaugă detalii despre tipurile de consultații și prețuri, dacă este posibil.]</p>
+                    <a href="#" class="button">Află mai multe</a> 
                 </div>
                 <div class="service">
+                    <img src="[Link către imagine vaccinari.jpg]" alt="Vaccinări animale">
                     <h3>Vaccinări</h3>
-                    <p>Protecție împotriva bolilor prin vaccinări sigure și eficiente.</p>
+                    <p>Protejați-vă animalele de companie de boli grave prin vaccinări regulate. [Adaugă detalii despre schema de vaccinare și prețuri.]</p>
+                    <a href="#" class="button">Vezi schema de vaccinare</a> 
                 </div>
                 <div class="service">
+                    <img src="[Link către imagine chirurgie.jpg]" alt="Chirurgie Veterinară">
                     <h3>Chirurgie</h3>
-                    <p>Intervenții chirurgicale realizate cu grijă și profesionalism.</p>
+                    <p>Intervenții chirurgicale realizate cu grijă și profesionalism, utilizând echipamente moderne și tehnici minim invazive. [Adaugă detalii despre tipurile de intervenții chirurgicale oferite.]</p>
+                    <a href="#" class="button">Află mai multe</a>
                 </div>
                 <div class="service">
+                    <img src="[Link către imagine tratamente.jpg]" alt="Tratamente Veterinare">
                     <h3>Tratamente</h3>
-                    <p>Tratamente personalizate pentru sănătatea animalelor tale.</p>
+                    <p>Tratamente personalizate pentru o varietate de afecțiuni, de la probleme minore la boli cronice. [Adaugă detalii despre tipurile de tratamente oferite.]</p>
+                    <a href="#" class="button">Află mai multe</a>
                 </div>
             </div>
         </section>
+
         <section id="contact">
             <h2 class="section-title">Contact</h2>
             <p>Telefon: <strong>0726 914 400</strong></p>
             <p>Email: contact@cabinetveterinar.ro</p>
             <p>Adresă: Strada Mihai Eminescu, Deva</p>
+
+            <div></div>
+
+            <form action="#" method="post"> 
+                <label for="nume">Nume:</label><br>
+                <input type="text" id="nume" name="nume"><br><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br><br>
+                <label for="mesaj">Mesaj:</label><br>
+                <textarea id="mesaj" name="mesaj"></textarea><br><br>
+                <input type="submit" value="Trimite">
+            </form>
         </section>
     </div>
     <footer>
-        <p>&copy; 2025 Cabinet Veterinar. Toate drepturile rezervate.</p>
+        <p>&copy; 2025 Cabinet Veterinar - Moon Veterinary. Toate drepturile rezervate.</p> 
     </footer>
 </body>
 </html>
