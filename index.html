@@ -5,6 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cabinet Veterinar - Moon Veterinary</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Facebook SDK for JavaScript -->
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId      : '538443499345155',  // App ID-ul tău
+                cookie     : true,
+                xfbml      : true,
+                version    : 'v12.0'  // Versiunea API-ului
+            });
+
+            // Verificăm starea de autentificare la încărcarea paginii
+            FB.getLoginStatus(function(response) {
+                statusChangeCallback(response);
+            });
+        };
+
+        (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+        // Callback pentru a trata răspunsul de la FB.getLoginStatus
+        function statusChangeCallback(response) {
+            console.log('Starea autentificării este: ', response.status);
+            
+            if (response.status === 'connected') {
+                // Utilizatorul este autentificat la Facebook și aplicația ta
+                console.log('Utilizator conectat cu Facebook. UserID: ' + response.authResponse.userID);
+                // Poți adăuga aici logica pentru a redirecționa utilizatorul către o pagină logată
+            } else if (response.status === 'not_authorized') {
+                // Utilizatorul este logat în Facebook, dar nu este logat în aplicația ta
+                console.log('Utilizatorul nu este logat în aplicația ta.');
+                // Afișează un buton de login
+                showLoginButton();
+            } else {
+                // Utilizatorul nu este conectat la Facebook
+                console.log('Utilizatorul nu este conectat la Facebook.');
+                // Afișează un buton de login
+                showLoginButton();
+            }
+        }
+
+        // Funcția pentru a arăta butonul de login
+        function showLoginButton() {
+            // Afișează un buton pentru autentificare cu Facebook
+            document.getElementById('loginButton').style.display = 'block';
+        }
+
+        // Funcția pentru login cu Facebook
+        function loginWithFacebook() {
+            FB.login(function(response) {
+                if (response.authResponse) {
+                    console.log('Autentificare reușită');
+                    // Aici poți prelua informațiile utilizatorului sau alte date
+                } else {
+                    console.log('Autentificare eșuată');
+                }
+            }, {scope: 'public_profile,email,pages_show_list,pages_read_engagement'});
+        }
+    </script>
+
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -63,6 +128,9 @@
         footer p {
             margin: 0;
         }
+        #loginButton {
+            display: none; /* Ascundem butonul până când este necesar */
+        }
     </style>
 </head>
 <body>
@@ -81,12 +149,15 @@
             <h2 class="section-title">Bine ați venit la Moon Veterinary</h2>
             <p>La Moon Veterinary, suntem dedicați sănătății și bunăstării animalelor tale. Oferim servicii veterinare complete, având grijă de prietenii tăi necuvântători cu profesionalism și empatie.</p>
             <img src="img/doctor.jpg" alt="Dr. Dancila Alexandra Elena" style="width: 100%; height: auto; border-radius: 10px;">
+            
+            <!-- Butonul de login care va fi afișat dacă utilizatorul nu este autentificat -->
+            <button id="loginButton" onclick="loginWithFacebook()">Conectează-te cu Facebook</button>
         </section>
-
-    
+    </div>
 
     <footer>
         <p>&copy; 2025 Moon Veterinary. Toate drepturile rezervate. <strong>Versiunea 1.3</strong></p>
     </footer>
+
 </body>
 </html>
