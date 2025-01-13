@@ -37,7 +37,16 @@
             if (response.status === 'connected') {
                 // Utilizatorul este autentificat la Facebook și aplicația ta
                 console.log('Utilizator conectat cu Facebook. UserID: ' + response.authResponse.userID);
-                // Poți adăuga aici logica pentru a redirecționa utilizatorul către o pagină logată
+                
+                // Preluăm informațiile utilizatorului
+                FB.api('/me', {fields: 'name,email'}, function(response) {
+                    console.log('Bine ai venit, ' + response.name);
+                    alert('Bine ai venit, ' + response.name);
+                    // Poți redirecționa utilizatorul către o altă secțiune a site-ului
+                    // Exemplu:
+                    // window.location.href = 'pagina-ta-logata.html'; 
+                });
+                
             } else if (response.status === 'not_authorized') {
                 // Utilizatorul este logat în Facebook, dar nu este logat în aplicația ta
                 console.log('Utilizatorul nu este logat în aplicația ta.');
@@ -184,3 +193,4 @@
 
 </body>
 </html>
+
