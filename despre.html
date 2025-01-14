@@ -10,22 +10,32 @@
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            background-color: #9E7A4D;  /* Culoarea Mocha Mousse 2025 */
             color: #333;
-        }
-        header {
-            background: linear-gradient(90deg, #4CAF50, #66BB6A);
-            color: white;
-            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
             text-align: center;
         }
+        header {
+            background-color: #D1C6B1; /* Crem complementat pentru fundalul mocha */
+            width: 100%;
+            padding: 40px 20px;
+            color: white;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
         nav {
-            background-color: white;
+            background-color: #D1C6B1;  /* Culoare similară pentru nav */
             border-bottom: 1px solid #ddd;
+            width: 100%;
             text-align: center;
         }
         nav a {
-            color: #4CAF50;
+            color: #4C3F27;  /* O nuanță complementară */
             padding: 15px 20px;
             text-decoration: none;
             font-weight: bold;
@@ -36,8 +46,76 @@
         }
         .container {
             max-width: 1200px;
-            margin: auto;
+            margin: 20px;
             padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .home-section, .about-section, .services-section, .contact-section, #google-reviews, #slider {
+            margin: 40px 0;
+            width: 100%;
+            text-align: center;
+        }
+        .section-title {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+        footer {
+            background-color: #4C3F27;  /* O nuanță complementară */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            width: 100%;
+            margin-top: 40px;
+        }
+        footer p {
+            margin: 0;
+        }
+
+        /* Fundal */
+        body {
+            background-image: url('Back.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Formatarea textului */
+        .content-text {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #fff;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Imaginea doctorului */
+        .doctor-image {
+            width: 80%;  /* Dimensiuni potrivite pentru imagine */
+            max-width: 500px;
+            margin-top: 30px;
+            border-radius: 10px;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .home-section {
+                padding: 15px;
+            }
+
+            .slider-container {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -52,9 +130,32 @@
         <a href="contact.html">Contact</a>
     </nav>
     <div class="container">
-        <h2>Cine suntem</h2>
-        <p>Suntem un cabinet veterinar dedicat sănătății animalelor dumneavoastră de companie.</p>
-        <p>Echipa noastră este condusă de Dr. Dancila Alexandra, cu o experiență vastă în îngrijirea animalelor.</p>
+        <h2 class="section-title">Povestea frumoasă a doctorului veterinar Dăncilă Alexandra și Cabinetul MOON Veterinary din Deva</h2>
+        <div class="content-text">
+            <p>Într-un colț liniștit al orașului Deva, pasiunea și determinarea unui om au dat viață unui vis măreț. Dr. Dăncilă Alexandra Elena, o tânără dedicată și iubitoare de animale, a reușit să transforme dragostea pentru necuvântătoare într-o carieră plină de sens. Astfel, în august 2022, cabinetul MOON Veterinary și-a deschis porțile, devenind un loc dedicat grijii și sănătății animalelor.</p>
+
+            <h3>Inspirația din spatele poveștii</h3>
+            <p>Încă din copilărie, Alexandra a simțit o legătură aparte cu lumea animalelor. Fiecare pisică rătăcită sau câine fără adăpost era văzut de ea ca un prieten ce avea nevoie de sprijin. Această chemare a dus-o spre studiile de medicină veterinară, unde a învățat să își transforme pasiunea în cunoștințe practice.</p>
+
+            <p>Deschiderea cabinetului MOON Veterinary a fost un pas firesc, dar și o provocare pe care Alexandra a întâmpinat-o cu mult curaj. Numele cabinetului, inspirat de simbolul lunii, reflectă ideea de speranță și de lumină, chiar și în momentele dificile.</p>
+
+            <h3>Un loc dedicat comunității</h3>
+            <p>Cabinetul MOON Veterinary oferă servicii esențiale pentru sănătatea animalelor, punând accent pe îngrijire personalizată și empatie. Fiecare pacient este tratat cu atenție, iar stăpânii găsesc aici sprijin și sfaturi pentru a asigura o viață fericită și sănătoasă prietenilor lor necuvântători.</p>
+
+            <p>Pentru Alexandra, cabinetul este mai mult decât un loc de muncă – este o continuare a visului său de a contribui la bunăstarea animalelor și a comunității locale.</p>
+
+            <h3>Un început promițător</h3>
+            <p>De la deschiderea cabinetului, Alexandra a reușit să creeze o legătură puternică cu iubitorii de animale din Deva. MOON Veterinary continuă să crească, fiind un exemplu de dedicare și profesionalism.</p>
+
+            <p>Povestea Dr. Dăncilă Alexandra este o sursă de inspirație pentru toți cei care își urmează visurile, iar MOON Veterinary rămâne un loc unde grija și iubirea pentru animale se întâlnesc zi de zi.</p>
+        </div>
+
+        <!-- Poza doctorului la finalul textului -->
+        <img src="Doctor.Jpeg" alt="Dr. Dancila Alexandra Elena" class="doctor-image">
     </div>
+
+    <footer>
+        <p>&copy; 2025 Moon Veterinary. Toate drepturile rezervate. <strong>Versiunea 1.8</strong></p>
+    </footer>
 </body>
 </html>
