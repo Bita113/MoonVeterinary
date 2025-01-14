@@ -28,10 +28,17 @@
             width: 100%;
             padding: 20px 0;
             color: white;
+            text-align: center;
         }
         header h1 {
             margin: 0;
             font-size: 2rem;
+        }
+        header img {
+            max-width: 200px;  /* Lățimea maximă a logo-ului */
+            height: auto;
+            display: block;
+            margin: 20px auto;
         }
         header nav {
             display: flex;
@@ -152,19 +159,19 @@
 <body>
     <header>
         <h1>Moon Veterinary</h1>
-        <nav>
-            <a href="despre.html">Despre Noi</a>
-            <a href="servicii.html">Servicii</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+        <img src="Logo.png" alt="Logo Moon Veterinary"> <!-- Logo-ul cabinetului -->
+        <p>Aflați mai multe despre Moon Veterinary și echipa noastră.</p>
     </header>
-
+    <nav>
+        <a href="index.html">Acasă</a>
+        <a href="servicii.html">Servicii</a>
+        <a href="contact.html">Contact</a>
+    </nav>
     <div class="container">
         <!-- Acasă -->
         <section id="home" class="home-section">
             <h2 class="section-title">Bine ați venit la Moon Veterinary</h2>
             <p>La Moon Veterinary, suntem dedicați sănătății și bunăstării animalelor tale. Oferim servicii veterinare complete, având grijă de prietenii tăi necuvântători cu profesionalism și empatie.</p>
-            <img src="Doctor.Jpeg" alt="Dr. Dancila Alexandra Elena" style="width: 100%; height: auto; border-radius: 10px;">
         </section>
 
         <!-- Noutăți de pe Facebook -->
