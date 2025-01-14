@@ -49,7 +49,7 @@
             margin: auto;
             padding: 20px;
         }
-        .home-section, .about-section, .services-section, .contact-section, #testimonials, #slider {
+        .home-section, .about-section, .services-section, .contact-section, #google-reviews, #slider {
             margin: 40px 0;
         }
         .section-title {
@@ -69,12 +69,10 @@
             margin: 0;
         }
 
-        /* Testimoniale CSS */
-        #testimonials .testimonial {
-            background-color: #f1f1f1;
-            padding: 20px;
-            margin: 10px 0;
-            border-radius: 5px;
+        /* Google Map embed */
+        #map {
+            height: 400px;
+            width: 100%;
         }
 
         /* Formular de contact CSS */
@@ -110,25 +108,6 @@
             background-color: #66BB6A;
         }
 
-        /* Slider CSS */
-        .slider-container {
-            display: flex;
-            overflow: hidden;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .slider-image {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .slider-container:hover .slider-image {
-            transform: scale(1.1);
-        }
-
         /* Mobile responsiveness */
         @media (max-width: 768px) {
             header {
@@ -143,10 +122,6 @@
 
             .container {
                 padding: 10px;
-            }
-
-            .fb-page {
-                width: 100%;
             }
 
             .home-section {
@@ -195,27 +170,41 @@
             </div>
         </section>
 
-        <!-- Testimoniale -->
-        <section id="testimonials" class="home-section">
-            <h3 class="section-title">Ce spun clienții noștri</h3>
-            <div class="testimonial">
-                <p>"Serviciile oferite de Moon Veterinary sunt impecabile. Câinele meu a fost tratat cu multă grijă și profesionalism. Mulțumim!"</p>
-                <p><strong>Ioana Popa, Proprietar câine - Recenzie Google</strong></p>
-            </div>
-            <div class="testimonial">
-                <p>"Am fost foarte mulțumit de consultul pentru pisica mea. Atmosfera prietenoasă și personalul bine pregătit m-au făcut să mă simt în siguranță. Recomand cu căldură!"</p>
-                <p><strong>Alexandru Ionescu, Proprietar pisică - Recenzie Google</strong></p>
-            </div>
+        <!-- Recenzii Google -->
+        <section id="google-reviews" class="home-section">
+            <h3 class="section-title">Vezi recenziile noastre pe Google</h3>
+            <p>Accesează recenziile reale ale clienților noștri pe Google:</p>
+            <a href="https://www.google.com/search?sca_esv=0b57e98d7eb058fe&tbm=lcl&sxsrf=ADLYWIIH29R1AA0axCXIjj-jsgMJK2J8Jw:1736875498667&q=Moon+Veterinary+Recenzii&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDI1MbcwMDK1NDA2sTA0NjM0Nt3AyPiKUcI3Pz9PISy1JLUoMy-xqFIhKDU5Na8qM3MRK04pAHU7bQhRAAAA&rldimm=12547802590348136135&hl=ro-RO&sa=X&ved=2ahUKEwiy2fe43fWKAxVYVmwGHTEWKTIQ9fQKegQINBAF&biw=1280&bih=567&dpr=1.5#lkt=LocalPoiReviews" target="_blank">
+                <button>Vezi recenziile pe Google</button>
+            </a>
         </section>
 
-        <!-- Slider pentru imagini -->
-        <section id="slider" class="home-section">
-            <h3 class="section-title">Galerie Foto</h3>
-            <div class="slider-container">
-                <img src="img/doctor.jpg" alt="Doctor" class="slider-image">
-                <img src="img/clinic.jpg" alt="Clinic" class="slider-image">
-                <img src="img/pets.jpg" alt="Pets" class="slider-image">
-            </div>
+        <!-- Harta cu locația -->
+        <section id="location" class="home-section">
+            <h3 class="section-title">Locația noastră</h3>
+            <div id="map"></div>
+            <script>
+                function initMap() {
+                    var location = {lat: 44.4268, lng: 26.1025};  // Locația ta (exemplu: București)
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                        zoom: 14,
+                        center: location
+                    });
+                    var marker = new google.maps.Marker({
+                        position: location,
+                        map: map
+                    });
+                }
+            </script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+        </section>
+
+        <!-- Link către WhatsApp -->
+        <section id="whatsapp-contact" class="home-section">
+            <h3 class="section-title">Contactează-ne pe WhatsApp</h3>
+            <a href="https://wa.me/40726914400" target="_blank">
+                <button>Contactează-ne pe WhatsApp</button>
+            </a>
         </section>
 
         <!-- Formular de contact -->
@@ -234,8 +223,11 @@
                 <button type="submit">Trimite</button>
             </form>
         </section>
+    </div>
 
-        <!-- Link către recenzii Google -->
-        <section id="google-reviews" class="home-section">
-            <h3 class="section-title">Verifică recenziile noastre pe Google</h3>
-            <a href="https://www.google.com/search?client=firefox-b-e&sa=X&sca_esv=0b57e98d7eb058fe&tbm=lcl&sxsrf=ADLYWILcnlsu78KaEy__VNsQwqPgjWdc3Q:1736875046153&q=Moon+Veterinary+Recenzii&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDI1MbcwMDK1NDA2sTA0NjM0Nt3AyPiKUcI3P
+    <footer>
+        <p>&copy; 2025 Moon Veterinary. Toate drepturile rezervate. <strong>Versiunea 1.7</strong></p>
+    </footer>
+
+</body>
+</html>
