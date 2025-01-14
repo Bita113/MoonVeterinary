@@ -17,22 +17,27 @@
             padding: 0;
             background-color: #9E7A4D;  /* Culoarea Mocha Mousse 2025 */
             color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: center;
         }
         header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: linear-gradient(90deg, #4CAF50, #66BB6A);
+            background-color: #D1C6B1; /* Crem complementat pentru fundalul mocha */
+            width: 100%;
+            padding: 20px 0;
             color: white;
-            padding: 20px 40px;
         }
         header h1 {
             margin: 0;
-            font-size: 1.8rem;
+            font-size: 2rem;
         }
         header nav {
             display: flex;
+            justify-content: center;
             gap: 20px;
+            margin-top: 10px;
         }
         header nav a {
             color: white;
@@ -40,29 +45,35 @@
             font-weight: bold;
             padding: 10px 20px;
             border-radius: 5px;
+            background-color: #4C3F27;  /* O nuanță complementară */
         }
         header nav a:hover {
             background-color: rgba(255, 255, 255, 0.3);
         }
         .container {
             max-width: 1200px;
-            margin: auto;
+            margin: 20px;
             padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .home-section, .about-section, .services-section, .contact-section, #google-reviews, #slider {
             margin: 40px 0;
+            width: 100%;
+            text-align: center;
         }
         .section-title {
-            text-align: center;
             color: white;
             margin-bottom: 20px;
-            font-size: 1.8rem;
+            font-size: 2rem;
         }
         footer {
-            background-color: #4CAF50;
+            background-color: #4C3F27;  /* O nuanță complementară */
             color: white;
             text-align: center;
             padding: 20px 0;
+            width: 100%;
             margin-top: 40px;
         }
         footer p {
@@ -72,7 +83,8 @@
         /* Harta Google Maps */
         #map {
             height: 400px;
-            width: 100%;
+            width: 80%;
+            margin: 20px auto;
         }
 
         /* Fundal */
@@ -109,6 +121,7 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            width: 100%;
         }
 
         #contact-form button:hover {
@@ -119,12 +132,7 @@
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
-                align-items: flex-start;
-            }
-
-            header nav {
-                flex-direction: column;
-                gap: 10px;
+                align-items: center;
             }
 
             .container {
