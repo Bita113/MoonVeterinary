@@ -49,7 +49,7 @@
             margin: auto;
             padding: 20px;
         }
-        .home-section, .about-section, .services-section, .contact-section {
+        .home-section, .about-section, .services-section, .contact-section, #testimonials, #slider {
             margin: 40px 0;
         }
         .section-title {
@@ -67,6 +67,95 @@
         }
         footer p {
             margin: 0;
+        }
+
+        /* Testimoniale CSS */
+        #testimonials .testimonial {
+            background-color: #f1f1f1;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+
+        /* Formular de contact CSS */
+        #contact-form form {
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        #contact-form label {
+            margin-bottom: 5px;
+        }
+
+        #contact-form input, #contact-form textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #contact-form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #contact-form button:hover {
+            background-color: #66BB6A;
+        }
+
+        /* Slider CSS */
+        .slider-container {
+            display: flex;
+            overflow: hidden;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slider-image {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .slider-container:hover .slider-image {
+            transform: scale(1.1);
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            header nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .fb-page {
+                width: 100%;
+            }
+
+            .home-section {
+                padding: 15px;
+            }
+
+            .slider-container {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -105,13 +194,55 @@
                 </blockquote>
             </div>
         </section>
+
+        <!-- Testimoniale -->
+        <section id="testimonials" class="home-section">
+            <h3 class="section-title">Ce spun clienții noștri</h3>
+            <div class="testimonial">
+                <p>"Moon Veterinary a avut grijă de câinele meu în mod exceptional! Recomand cu încredere!"</p>
+                <p><strong>Ion Popescu</strong></p>
+            </div>
+            <div class="testimonial">
+                <p>"Un serviciu de calitate, cu un personal foarte prietenos și dedicat. Mulțumim!"</p>
+                <p><strong>Maria Ionescu</strong></p>
+            </div>
+        </section>
+
+        <!-- Slider pentru imagini -->
+        <section id="slider" class="home-section">
+            <h3 class="section-title">Galerie Foto</h3>
+            <div class="slider-container">
+                <img src="img/doctor.jpg" alt="Doctor" class="slider-image">
+                <img src="img/clinic.jpg" alt="Clinic" class="slider-image">
+                <img src="img/pets.jpg" alt="Pets" class="slider-image">
+            </div>
+        </section>
+
+        <!-- Formular de contact -->
+        <section id="contact-form" class="home-section">
+            <h3 class="section-title">Contactează-ne</h3>
+            <form action="mailto:alex.bita@yahoo.com" method="POST" enctype="multipart/form-data">
+                <label for="name">Nume:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Mesaj:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Trimite</button>
+            </form>
+        </section>
     </div>
 
     <footer>
-        <p>&copy; 2025 Moon Veterinary. Toate drepturile rezervate. <strong>Versiunea 1.7</strong></p>
+        <div class="footer-links">
+            <a href="#">Politica de Confidențialitate</a>
+            <a href="#">Termeni și Condiții</a>
+            <a href="#">Despre Noi</a>
+        </div>
+        <p>&copy; 2025 Moon Veterinary. Toate drepturile rezervate. <strong>Versiunea 1.6</strong></p>
     </footer>
-
 </body>
 </html>
-
-
