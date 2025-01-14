@@ -15,7 +15,7 @@
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            background-color: #9E7A4D;  /* Culoarea Mocha Mousse 2025 */
             color: #333;
         }
         header {
@@ -54,7 +54,7 @@
         }
         .section-title {
             text-align: center;
-            color: #4CAF50;
+            color: white;
             margin-bottom: 20px;
             font-size: 1.8rem;
         }
@@ -69,10 +69,17 @@
             margin: 0;
         }
 
-        /* Google Map embed */
+        /* Harta Google Maps */
         #map {
             height: 400px;
             width: 100%;
+        }
+
+        /* Fundal */
+        body {
+            background-image: url('Back.png');
+            background-size: cover;
+            background-position: center;
         }
 
         /* Formular de contact CSS */
@@ -149,7 +156,7 @@
         <section id="home" class="home-section">
             <h2 class="section-title">Bine ați venit la Moon Veterinary</h2>
             <p>La Moon Veterinary, suntem dedicați sănătății și bunăstării animalelor tale. Oferim servicii veterinare complete, având grijă de prietenii tăi necuvântători cu profesionalism și empatie.</p>
-            <img src="img/doctor.jpg" alt="Dr. Dancila Alexandra Elena" style="width: 100%; height: auto; border-radius: 10px;">
+            <img src="Doctor.Jpeg" alt="Dr. Dancila Alexandra Elena" style="width: 100%; height: auto; border-radius: 10px;">
         </section>
 
         <!-- Noutăți de pe Facebook -->
@@ -182,29 +189,7 @@
         <!-- Harta cu locația -->
         <section id="location" class="home-section">
             <h3 class="section-title">Locația noastră</h3>
-            <div id="map"></div>
-            <script>
-                function initMap() {
-                    var location = {lat: 44.4268, lng: 26.1025};  // Locația ta (exemplu: București)
-                    var map = new google.maps.Map(document.getElementById('map'), {
-                        zoom: 14,
-                        center: location
-                    });
-                    var marker = new google.maps.Marker({
-                        position: location,
-                        map: map
-                    });
-                }
-            </script>
-            <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
-        </section>
-
-        <!-- Link către WhatsApp -->
-        <section id="whatsapp-contact" class="home-section">
-            <h3 class="section-title">Contactează-ne pe WhatsApp</h3>
-            <a href="https://wa.me/40726914400" target="_blank">
-                <button>Contactează-ne pe WhatsApp</button>
-            </a>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2778.3640414290185!2d22.905750274959445!3d45.864025806674825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x474ef3dc4a59658b%3A0xae22bff98d6d4ec7!2sMoon%20Veterinary!5e0!3m2!1sro!2sro!4v1736876858569!5m2!1sro!2sro" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </section>
 
         <!-- Formular de contact -->
@@ -226,8 +211,9 @@
     </div>
 
     <footer>
-        <p>&copy; 2025 Moon Veterinary. Toate drepturile rezervate. <strong>Versiunea 1.7</strong></p>
+        <p>&copy; 2025 Moon Veterinary. Toate drepturile rezervate. <strong>Versiunea 1.8</strong></p>
     </footer>
 
 </body>
 </html>
+
